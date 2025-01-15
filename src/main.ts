@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       }, [[Tooltip, {
-        text: (timestamp: number, value: number, dayjsDate: dayjs.Dayjs) => value ? `${value} (${dayjsDate.format('LL')})` : "",
+        text: (_, value, dayjsDate) => `${value || 0} (${dayjsDate.format('dddd, LL')})`,
       }]]);
     }
   });
