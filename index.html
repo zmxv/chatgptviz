@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT usage</title>
+  </head>
+  <body>
+    <h1>ChatGPT usage</h1>
+    <input type="file" id="fileInput" accept=".json" />      
+    <p>
+      This open-source app visualizes your ChatGPT usage patterns through a heatmap.
+    </p>
+    <p>
+      All processing happens locally in your browser, so your data remains private.
+    </p>
+    <p>To get started:</p>
+    <ol>
+      <li>Open ChatGPT's <b>Settings</b> page either on the website or in the app.</li>
+      <li>Under <b>Data Controls</b>, select <b>Export Data</b> (OpenAI will email you a download link.)</li>
+      <li>Download and extract the zip file.</li>
+      <li>Select <b>conversations.json</b> in the zip folder using the button below.</li>
+    </ol>
+    <p>
+      <button id="fileButton">Load conversations.json</button>
+    </p>
+    <div id="cal"></div>
+    <p>
+      <a href="https://github.com/zmxv/chatgptviz" target="_blank">View source code on GitHub</a>
+    </p>
+    <p>
+      <a href="https://linkedin.com/in/zhenwang" target="_blank">Contact the developer</a>
+    </p>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
