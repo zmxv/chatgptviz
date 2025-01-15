@@ -1,5 +1,6 @@
 //@ts-nocheck
 import CalHeatmap from 'cal-heatmap';
+import Tooltip from 'cal-heatmap/plugins/Tooltip';
 import 'cal-heatmap/cal-heatmap.css';
 import './style.css';
 
@@ -31,7 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
             domain: [0, 10],
           }
         }
-      });
+      }, [[Tooltip, {
+        text: (timestamp: number, value: number, dayjsDate: dayjs.Dayjs) => value ? `${value} (${dayjsDate.format('LL')})` : "",
+      }]]);
     }
   });
 
